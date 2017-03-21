@@ -44,6 +44,7 @@ setup(
     packages=find_packages(exclude=['docs', 'tests*']),
     install_requires=[
         'sqre-apikit==0.1.1',
+        'sqre-dochub-proto>=0.0.2',
         'uWSGI==2.0.14'
     ],
     tests_require=['pytest'],
