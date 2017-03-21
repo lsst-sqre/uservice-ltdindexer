@@ -1,0 +1,21 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: u-ltdindexer
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        name: u-ltdindexer
+    spec:
+      containers:
+
+        - name: u-ltdindexer
+          imagePullPolicy: "Always"
+          image: "lsstsqre/uservice-ltdindexer"
+          ports:
+            -
+              containerPort: 5000
+              name: u-ltdindexer
+              
