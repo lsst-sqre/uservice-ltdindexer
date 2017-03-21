@@ -2,7 +2,8 @@
 
 # sqre-uservice-ltdindexer
 
-LSST DM SQuaRE api.lsst.codes-compliant microservice wrapper.  TODO
+LSST DM SQuaRE api.lsst.codes-compliant microservice wrapper to provide an
+LSST The Docs index page.
 
 ## Usage
 
@@ -13,8 +14,9 @@ LSST DM SQuaRE api.lsst.codes-compliant microservice wrapper.  TODO
 
 * `/`: returns `OK` (used by Google Container Engine Ingress healthcheck)
 
-* `/ltdindexer`: TODO
+* `/ltdindexer`, `/ltdindexer/json`: returns JSON structure with two
+  fields: `ul`, which contains a UTF-8-encoded HTML ul entity
+  with the list of documents on LTD, and `index`, which contains a
+  UTF-8 encoded HTML document wrapping the document list.
 
-### Returned Structure
-
-The returned structure is JSON.  TODO.
+* `/ltdindexer/page`: returns the index page (not as JSON).
